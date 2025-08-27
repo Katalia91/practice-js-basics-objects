@@ -9,13 +9,13 @@ const user = {
 };
 
 const today = new Date();
-const formattedDay = today.getDate();
-const formattedMonth = today.getMonth() + 1;
+const day = today.getDate();
+const month = today.getMonth() + 1;
 const userBirthDay = Number(user.born.day);
 const userBirthMonth = Number(user.born.month);
 
 function checkBirthday(user) {
-  if (userBirthDay === formattedDay && userBirthMonth === formattedMonth) {
+  if (userBirthDay === day && userBirthMonth === month) {
     console.log(`Yaay! ${user.firstName} It's your birthday! 🎉`);
   } else {
     console.log(`Sorry ${user.firstName}, today is not your birthday 🥲`);
